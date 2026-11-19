@@ -88,10 +88,13 @@ impl View {
         self.index = 0;
         self.notice.clear();
         if panel == Panel::Import {
-            self.files = self
-                .documents
-                .as_deref()
-                .map_or_else(Vec::new, local_puzzles);
+            self.files.clear();
+            if let Some(documents) = self.documents.as_deref() {
+                match primitive_app::with_storage(|| Ok(local_puzzles(documents))) {
+                    Ok(files) => self.files = files,
+                    Err(error) => self.notice = format!("Could not open Documents. {error}"),
+                }
+            }
         }
     }
 
@@ -99,13 +102,13 @@ impl View {
         let Some(path) = self.files.get(index) else {
             return Change::None;
         };
-        let contents = (|| -> io::Result<_> {
+        let contents = primitive_app::with_storage(|| {
             let mut bytes = Vec::new();
             File::open(path)?
                 .take((MAX_FILE_SIZE + 1) as u64)
                 .read_to_end(&mut bytes)?;
             Ok(bytes)
-        })();
+        });
         let result = contents
             .as_deref()
             .map_err(|_| "Could not read the puzzle.")
