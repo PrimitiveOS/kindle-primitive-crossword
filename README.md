@@ -45,7 +45,10 @@ cargo test --offline --locked --workspace
 cargo run --offline --locked -p crossword-desktop
 ```
 
-The desktop target writes previews to `build/previews/`. The desktop simulation exercises entry, clue selection, and reveal. Physical Kindle testing is pending. See the [device notes](docs/device-notes.md) for the verification checklist.
+The desktop target writes previews to `build/previews/`. The desktop simulation exercises entry, clue selection, and reveal.
+On an ARMHF Kindle Oasis 3 running firmware 5.18.2, Crossword opened and closed the Clues list, leaving the
+original puzzle unchanged, and returned to Launcher. See the [device notes](docs/device-notes.md) for the
+verification checklist.
 
 ## Licence
 
