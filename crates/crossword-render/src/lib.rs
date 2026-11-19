@@ -176,11 +176,14 @@ impl View {
                     .into_owned(),
                 Panel::Reveal => String::new(),
             };
-            canvas.card(bounds);
+            let pressed = canvas.control_pressed(bounds, false);
+            canvas.panel(bounds, 22, 2, if pressed { BLACK } else { PAPER });
             canvas.text(
                 bounds.inset(canvas.px(23)),
                 &label,
-                TextStyle::new(33).lines(2),
+                TextStyle::new(33)
+                    .lines(2)
+                    .ink(if pressed { PAPER } else { BLACK }),
             );
         }
         if self.index > 0 {
@@ -207,12 +210,14 @@ impl View {
         let w = canvas.bounds().w;
         let (_, clue) = self.game.clue();
         let (top, left, rows, columns) = self.viewport();
+        let board_active = self.panel != Some(Panel::Reveal);
         for r in 0..rows {
             for c in 0..columns {
                 let square = (r + top) * self.game.puzzle.width + c + left;
                 let bounds = board_cell(w, columns, r, c);
                 let black = self.game.puzzle.black_square(square);
-                let selected = self.game.square() == square;
+                let pressed = board_active && !black && canvas.control_pressed(bounds, false);
+                let selected = (self.game.square() == square) ^ pressed;
                 let in_clue = clue.squares.contains(&square);
                 let revealed = self.game.revealed(square);
                 let fill = if black || selected {
