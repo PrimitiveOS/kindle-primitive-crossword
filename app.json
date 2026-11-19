@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "primitive-crossword",
   "dir": "crossword",
-  "name": "Primitive Crossword",
+  "name": "Crossword",
   "subtitle": "Mini crosswords and your puzzles",
   "developer": {
     "name": "Primitive AI"

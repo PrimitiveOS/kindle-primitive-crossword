@@ -1,5 +1,5 @@
 #!/bin/sh
-# Name: Primitive Crossword
+# Name: Crossword
 # Author: Primitive AI
 # DontUseFBInk
 # PrimitiveUSBLease
