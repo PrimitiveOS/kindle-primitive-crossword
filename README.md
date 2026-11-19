@@ -32,9 +32,8 @@ Solve an original mini or open a standard Across Lite `.puz` file. Choose a squa
 
 ## Quick start
 
-1. Find the local ARMHF package and USB installation steps in the [install guide](INSTALL.md).
-2. Extract the package, copy the `crossword` and `documents` folders to your jailbroken Kindle’s user storage, and eject it.
-3. Open Crossword from Primitive Launcher. **Done** returns to the launcher grid.
+After setting up PrimitiveOS, open **Store** from Primitive Launcher. Choose **Crossword** under **Apps**,
+tap **Get**, and open it from the Launcher grid. The [install guide](INSTALL.md) also covers local USB testing.
 
 ## Develop locally
 
