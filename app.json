@@ -1,0 +1,26 @@
+{
+  "schema": 1,
+  "id": "primitive-crossword",
+  "dir": "crossword",
+  "name": "Primitive Crossword",
+  "subtitle": "Mini crosswords and your puzzles",
+  "developer": {
+    "name": "Primitive AI"
+  },
+  "categories": [
+    "games"
+  ],
+  "description": "Play original mini crosswords or open an unlocked .puz file from your Kindle. Read clues, type answers, check mistakes, and reveal answers one clue at a time.",
+  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-crossword",
+  "licence": "PolyForm-Noncommercial-1.0.0",
+  "source": "hosted",
+  "icon": "icon.png",
+  "changes": {
+    "network": false,
+    "stops_kindle_ui": false,
+    "starts_at_boot": false,
+    "root_filesystem": false,
+    "hooks": false
+  },
+  "versions": []
+}
