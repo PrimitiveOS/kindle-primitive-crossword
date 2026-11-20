@@ -11,7 +11,7 @@
     "games"
   ],
   "description": "Play original mini crosswords or open an unlocked .puz file from your Kindle. Read clues, type answers, check mistakes, and reveal answers one clue at a time.",
-  "repo": "https://github.com/DoanNguyenTrong/kindle-primitive-crossword",
+  "repo": "https://github.com/PrimitiveOS/kindle-primitive-crossword",
   "licence": "PolyForm-Noncommercial-1.0.0",
   "source": "hosted",
   "icon": "icon.png",
