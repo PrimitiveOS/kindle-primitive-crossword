@@ -2,15 +2,22 @@
 
 # Crossword
 
-**Original mini crosswords and your own puzzles on Kindle.**
+**Mini crosswords and your puzzles**
 
-[**Install guide**](INSTALL.md) · [**Device notes**](docs/device-notes.md) · [**Changelog**](CHANGELOG.md)
+[![Release](https://img.shields.io/github/v/release/PrimitiveOS/kindle-primitive-crossword?label=release)](https://github.com/PrimitiveOS/kindle-primitive-crossword/releases) [![Licence: PolyForm-Noncommercial-1.0.0](https://img.shields.io/badge/licence-PolyForm--Noncommercial--1.0.0-blue)](LICENSE) [![Store downloads](https://img.shields.io/badge/Store%20downloads-33-brightgreen)](https://primitiveos.github.io/kindle-primitive-catalog/v1/index.json)
+
+[**Download**](https://github.com/PrimitiveOS/kindle-primitive-crossword/releases/latest) · [**Install guide**](INSTALL.md) · [**Changelog**](CHANGELOG.md)
 
 </div>
 
 ---
 
-Solve an original mini or open a standard Across Lite `.puz` file. Choose a square or clue and enter letters with the on-screen keyboard. The app saves the open puzzle and your progress.
+Play original mini crosswords or open an unlocked .puz file from your Kindle. Read clues, type answers, check mistakes, and reveal answers one clue at a time.
+
+## Quick start
+
+After setting up PrimitiveOS, open **Store** from Primitive Launcher. Choose **Crossword** under **Apps**,
+tap **Get**, and open it from the Launcher grid. The [install guide](INSTALL.md) also covers the standalone USB package.
 
 ## Screenshots
 
@@ -30,11 +37,6 @@ Solve an original mini or open a standard Across Lite `.puz` file. Choose a squa
 - **Check and Reveal.** Check highlights mistakes. Reveal fills the selected answer after confirmation.
 - **Import your own puzzles.** Copy a standard unlocked `.puz` with single-letter cells to `documents/`, then choose **Puzzles → Import .puz**.
 
-## Quick start
-
-After setting up PrimitiveOS, open **Store** from Primitive Launcher. Choose **Crossword** under **Apps**,
-tap **Get**, and open it from the Launcher grid. The [install guide](INSTALL.md) also covers local USB testing.
-
 ## Develop locally
 
 Keep `doannt-kindle-tools` and `doannt-kindle-launcher` beside this checkout, then run the following from this repo.
@@ -48,6 +50,23 @@ The desktop target writes previews to `build/previews/`. The desktop simulation 
 On an ARMHF Kindle Oasis 3 running firmware 5.18.2, Crossword opened and closed the Clues list, leaving the
 original puzzle unchanged, and returned to Launcher. See the [device notes](docs/device-notes.md) for the
 verification checklist.
+
+## Status
+
+| Device | Status |
+|---|---|
+| Kindle Oasis 3 (1264 × 1680, firmware 5.18.2) | Tested on hardware |
+
+**Current version: 0.1.1.** Changes are in [CHANGELOG.md](CHANGELOG.md).
+
+## Downloads
+
+**33 downloads** from Store, as of 2026-11-21. Store shows the same count on the app page.
+The count is GitHub downloads of this app's release packages, from the [Store catalog](https://primitiveos.github.io/kindle-primitive-catalog/v1/index.json).
+
+## Documentation
+
+[Install guide](INSTALL.md) · [Changelog](CHANGELOG.md) · [Device notes](docs/device-notes.md)
 
 ## Licence
 
