@@ -412,7 +412,7 @@ impl App for View {
             return;
         }
         let w = canvas.bounds().w;
-        header(canvas, "Crossword", "Done");
+        header(canvas, "Crossword", "Exit");
         let (_, clue) = self.game.clue();
         let text = format!("{} {} · {}", clue.number, clue.direction.name(), clue.text);
         canvas.text(
